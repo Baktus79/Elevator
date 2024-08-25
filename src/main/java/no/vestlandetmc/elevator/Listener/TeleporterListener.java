@@ -80,13 +80,14 @@ public class TeleporterListener implements Listener {
 								return;
 							}
 						}
-						if (HookManager.isGriefPreventionLoaded()) {
+
+						if (HookManager.isGriefPreventionLoaded() && Config.GRIEFPREVENTION_HOOK) {
 							if (!GPHandler.haveTrust(e.getPlayer())) return;
 						}
-						if (HookManager.isWorldGuardLoaded()) {
+						if (HookManager.isWorldGuardLoaded() && Config.WORLDGUARD_HOOK) {
 							if (!WGHandler.haveTrust(e.getPlayer())) return;
 						}
-						if (HookManager.isGriefDefenderLoaded()) {
+						if (HookManager.isGriefDefenderLoaded() && Config.GRIEFDEFENDER_HOOK) {
 							if (!GDHandler.haveTrust(e.getPlayer())) return;
 						}
 
